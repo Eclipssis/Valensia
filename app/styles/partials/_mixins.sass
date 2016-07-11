@@ -1,0 +1,48 @@
+@import const
+
+// placeholder
+=placeholder-color($color-pl)
+  &:-moz-placeholder,
+  &::-moz-placeholder
+    color: $color-pl
+    opacity: 1
+  &::-webkit-input-placeholder
+    color: $color-pl
+
+// border-radius
+=border-radius($radius: 5px)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+// box-shadow
+=box-shadow($top, $left, $blur, $color, $inset:false)
+  @if $inset
+    -webkit-box-shadow:inset $top $left $blur $color
+    -moz-box-shadow:inset $top $left $blur $color
+    box-shadow:inset $top $left $blur $color
+  @else
+    -webkit-box-shadow: $top $left $blur $color
+    -moz-box-shadow: $top $left $blur $color
+    box-shadow: $top $left $blur $color
+
+// base table
+=table-base
+  th, td
+    text-align: center
+    padding: 5px 10px
+    border: 1px solid #000
+    vertical-align: middle
+  td
+    font-weight: bold
+    text-align: left
+
+// // //opacity
+// =ops($p)
+//   opacity: $p*0.01
+//   -webkit-opacity: $p*0.01
+//   -khtml-opacity: $p*0.01
+//   -moz-opacity: $p*0.01
+//   filter:alpha(opacity=$p)"
+//   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$p)"

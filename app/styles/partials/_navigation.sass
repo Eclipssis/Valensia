@@ -1,0 +1,19 @@
+@import mixins
+@import const
+@import sprite
+
+/*----------- Navigation *
+ ------------------------------------------------------------*/
+
+.breadcrumb
+  li
+    list-style-type: none
+    display: inline-block
+    vertical-align: middle
+    &:before
+      content: '/ '
+    &:first-child
+      &:before
+        display: none
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "description": "Eclipssis FrontEnd Project",
+  "main": "index.js",
+  "authors": [
+    "Eclipssis"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.0"
+  }
+}
