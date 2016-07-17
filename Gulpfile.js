@@ -74,7 +74,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
         .pipe(sass({
-            includePaths: ['src/style/'],
+            includePaths: ['app/style/'],
             outputStyle: 'compressed',
             errLogToConsole: true
         }))
