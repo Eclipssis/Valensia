@@ -11,6 +11,8 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    spritesmith = require('gulp.spritesmith'),
+    merge = require('merge-stream'),
     reload = browserSync.reload;
 
 var path = {
@@ -23,7 +25,7 @@ var path = {
     },
     src: {
         html: 'app/*.html',
-        js: 'app/js/main.js',
+        js: 'app/js/*.js',
         style: 'app/styles/main.sass',
         img: 'app/images/**/*.*',
         fonts: 'app/fonts/**/*.*'
@@ -65,8 +67,7 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
-        .pipe(rigger()) 
-        .pipe(uglify()) 
+        .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
@@ -99,6 +100,24 @@ gulp.task('image:build', function () {
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
+});
+
+gulp.task('sprite', function () {
+  // Generate our spritesheet
+  var spriteData = gulp.src('app/images/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.sass',
+    imgPath: '../images/sprite.png',
+    padding: 10
+  }));
+
+  var imgStream = spriteData.img
+    .pipe(gulp.dest('app/images/'));
+
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('app/styles/partials/'));
+
+  return merge(imgStream, cssStream);
 });
 
 gulp.task('build', [

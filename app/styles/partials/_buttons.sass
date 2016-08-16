@@ -4,23 +4,23 @@
 
 /*----------- button style *
  ------------------------------------------------------------*/
+
 .btn
-  min-width: 258px
+  min-width: 250px
   position: relative
   display: inline-block
   vertical-align: middle
   padding: 10px 20px
   margin: 0
-  font: 20px/40px 'PT Sans', Arial, sans-serif
+  font: 20px/20px 'PT Sans', Arial, sans-serif
   text-align: center
   text-decoration: none
   cursor: pointer
   outline: none
   border: none
-  text-transform: uppercase
   background-color: $btn-bg-color
   color: $btn-color
-  border-radius: 4px
+  border-radius: 10px
   &:hover
     background-color: $btn-h-bg-color
     color: $btn-h-color
@@ -29,30 +29,22 @@
     background-color: $btn-act-bg-color
     color: $btn-act-color
     box-shadow: $btn-act-shadow
-.btn:focus
-  outline: none
-  color: $btn-color
+  &:focus
+    outline: none
+    color: $btn-color
 
 .btn-max
   width: 100%
 
-.btn-lg
-  height: 100px
-  padding: 30px 20px
 
-.btn-border
-  border: 2px solid $btn-border-color
-  color: $btn-border-text-color
-  background-color: $btn-border-bg
-  &:hover
-    background-color: $btn-h-border-bg
-    color: $btn-h-border-text-color
-    border-color: $btn-h-border-color
-  &:focus
-    color: $btn-border-text-color
-    color: $btn-border-text-color
-  &:active
-    background-color: $btn-act-border-bg
-    color: $btn-act-border-text-color
-    border-color: $btn-act-border-color
-    box-shadow: $btn-act-border-shadow
+
+/*----------- media style -----------*/
+
+
+// @media only screen and (max-width: 768px)
+
+@media only screen and (max-width: 480px)
+
+  .btn 
+    min-width: 100px
+    padding: 5px 10px

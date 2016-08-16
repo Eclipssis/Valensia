@@ -1,1 +1,22 @@
-jQuery(function(e){e("input[placeholder], textarea[placeholder]").placeholder(),e(".menu-icon").click(function(){e(this).parent().is(".menu-open")?(e(this).parent().removeClass("menu-open"),e("body").removeClass("menu-open-wrapper-page")):(e(this).parent().addClass("menu-open"),e("body").addClass("menu-open-wrapper-page"))})}),function(e,a,t){function r(){e(this).find(p).each(n)}function l(e){for(var e=e.attributes,a={},t=/^jQuery\d+/,r=0;r<e.length;r++)e[r].specified&&!t.test(e[r].name)&&(a[e[r].name]=e[r].value);return a}function n(){var a,t=e(this);t.is(":password")||(t.data("password")?(a=t.next().show().focus(),e("label[for="+t.attr("id")+"]").attr("for",a.attr("id")),t.remove()):t.realVal()==t.attr("placeholder")&&(t.val(""),t.removeClass("placeholder")))}function o(){var a,t,r=e(this);placeholder=r.attr("placeholder"),e.trim(r.val()).length>0||(r.is(":password")?(t=r.attr("id")+"-clone",a=e("<input/>").attr(e.extend(l(this),{type:"text",value:placeholder,"data-password":1,id:t})).addClass("placeholder"),r.before(a).hide(),e("label[for="+r.attr("id")+"]").attr("for",t)):(r.val(placeholder),r.addClass("placeholder")))}var d="placeholder"in a.createElement("input"),i="placeholder"in a.createElement("textarea"),p=":input[placeholder]";e.placeholder={input:d,textarea:i},!t&&d&&i?e.fn.placeholder=function(){}:(!t&&d&&!i&&(p="textarea[placeholder]"),e.fn.realVal=e.fn.val,e.fn.val=function(){var a,t=e(this);return arguments.length>0?t.realVal.apply(this,arguments):(a=t.realVal(),t=t.attr("placeholder"),a==t?"":a)},e.fn.placeholder=function(){return this.filter(p).each(o),this},e(function(e){var t=e(a);t.on("submit","form",r),t.on("focus",p,n),t.on("blur",p,o),e(p).placeholder()}))}(jQuery,document,window.debug);
+jQuery(function($){
+
+  $('input[placeholder], textarea[placeholder]').placeholder();
+
+  // add-open-class
+  $('.menu-icon').click(function(){
+   if($(this).parent().is('.menu-open')){
+     $(this).parent().removeClass('menu-open');
+     $('body').removeClass('menu-open-wrapper-page');
+   }else{
+     $(this).parent().addClass('menu-open');
+     $('body').addClass('menu-open-wrapper-page');
+   }
+  });
+
+});//end ready
+
+
+//Plugin placeholder
+(function(b,f,i){function l(){b(this).find(c).each(j)}function m(a){for(var a=a.attributes,b={},c=/^jQuery\d+/,e=0;e<a.length;e++)if(a[e].specified&&!c.test(a[e].name))b[a[e].name]=a[e].value;return b}function j(){var a=b(this),d;a.is(":password")||(a.data("password")?(d=a.next().show().focus(),b("label[for="+a.attr("id")+"]").attr("for",d.attr("id")),a.remove()):a.realVal()==a.attr("placeholder")&&(a.val(""),a.removeClass("placeholder")))}function k(){var a=b(this),d,c;placeholder=a.attr("placeholder");
+b.trim(a.val()).length>0||(a.is(":password")?(c=a.attr("id")+"-clone",d=b("<input/>").attr(b.extend(m(this),{type:"text",value:placeholder,"data-password":1,id:c})).addClass("placeholder"),a.before(d).hide(),b("label[for="+a.attr("id")+"]").attr("for",c)):(a.val(placeholder),a.addClass("placeholder")))}var g="placeholder"in f.createElement("input"),h="placeholder"in f.createElement("textarea"),c=":input[placeholder]";b.placeholder={input:g,textarea:h};!i&&g&&h?b.fn.placeholder=function(){}:(!i&&g&&
+!h&&(c="textarea[placeholder]"),b.fn.realVal=b.fn.val,b.fn.val=function(){var a=b(this),d;if(arguments.length>0)return a.realVal.apply(this,arguments);d=a.realVal();a=a.attr("placeholder");return d==a?"":d},b.fn.placeholder=function(){this.filter(c).each(k);return this},b(function(a){var b=a(f);b.on("submit","form",l);b.on("focus",c,j);b.on("blur",c,k);a(c).placeholder()}))})(jQuery,document,window.debug);
