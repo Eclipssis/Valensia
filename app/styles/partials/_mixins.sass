@@ -37,3 +37,21 @@
   td
     font-weight: bold
     text-align: left
+
+// media
+
+=desktop-large
+  @media only screen and (max-width: $desktop-large)
+    @content
+
+=desktop
+  @media only screen and (max-width: $desktop)
+    @content
+
+=tablet
+  @media only screen and (max-width: $tablet)
+    @content 
+
+=mobile
+  @media only screen and (max-width: $mobile)
+    @content
