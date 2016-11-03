@@ -1,0 +1,84 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+body
+  #wrapper
+
+    //= template/header.jade
+
+    section#middle
+      .content
+        .container
+          .page-subtitle Оформление заказа
+
+          form.order-form
+            .form-group
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Ваше имя 
+                  span.color-red *
+
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Ваш телефон
+                  span.color-red *
+
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Email адрес
+
+            .form-group
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Город
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Адрес
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Корпус
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Подъезд
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Этаж
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Квартира        
+              .wrapp-input
+                input(type="text")
+                label.placeholder-label Ближайшее метро
+
+            .form-group
+              textarea(placeholder="Комментарии")
+
+            a.btn.btn-big(href="#!") ОФОРМИТЬ ЗАКАЗ
+
+          .description
+            .description__body
+              span.description__title ДОСТАВКА
+              p при ПОКУПКЕ ДО 6000 руб - 
+                b.bold 700 руб
+              p при ПОКУПКЕ ОТ 6000 руб - 
+                b.bold.color-red БЕСПЛАТНО
+              p Доставка за пределы МКАД - 
+                b.bold 40 руб/км
+
+            .description__body
+              span.description__title ПОДЪЕМ
+              p При наличии грузового лифта (или вместимого пассажирского лифта) подъем стоит 
+                b.bold 500 руб.
+              p В цену подъема включены занос в квартиру и сборка
+
+        
+
+
+
+    .page-buffer
+
+
+
+  //= template/footer.jade

@@ -1,0 +1,156 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+body
+  #wrapper
+
+    //= template/header.jade
+
+    section#middle
+      .content
+        .container
+          .row
+            .col-lg-6
+              .product-slider-wrap
+                // Place somewhere in the <body> of your page
+                #slider.flexslider.product-slider
+                  ul.slides
+                    li
+                      img(src='images/big-image.jpg')
+                    li
+                      img(src='images/big-image.jpg')
+                    li
+                      img(src='images/big-image.jpg')
+                    li
+                      img(src='images/big-image.jpg')
+
+
+                    // items mirrored twice, total of 12
+                #carousel.flexslider.product-carousel
+                  ul.slides
+                    li
+                      img(src='images/sofa-2.jpg')
+                    li
+                      img(src='images/sofa-2.jpg')
+                    li
+                      img(src='images/sofa-2.jpg')
+                    li
+                      img(src='images/sofa-2.jpg')
+
+
+
+            .col-lg-6
+
+              .product-info
+                span.product-info__name НАЗВАНИЕ ДИВАНА
+                .product-info__availability Наличие: 
+                  span.color-green Есть в наличии
+                .product-info__price 4 900 руб.
+                .product-info__panel
+                  .counter-panel.grey-theme
+                      input(type='text', value='1' readonly="readonly")
+                      div.buttons
+                        span.plus +
+                        span.minus -
+
+                  a.btn.btn-large(href="#!") купить
+
+                .product-info__description
+                  div
+                    span Размер (ШхВхД, см): 
+                    span Размер спального места (ШхД, см): 
+                    span Тип дивана: 
+                    span Наличие ящика для белья: 
+                    span Механизм трансформации:
+                    span Наполнитель:
+
+                  div 
+                    span 165 х 95 х 80см  
+                    span 120 х 190см  
+                    span прямой  
+                    span есть  
+                    span выкатной  
+                    span ППУ на основе ортопедических лотов
+
+                .product-info__caption Данную модель можно приобрести с любыми размерами и в любой расцветке
+
+      .adventages.adventages--border.clearfix
+        .container
+          .adventages__body
+            .adventages__icon.icon-6
+            .adventages__title Доставкав </br> течении 1 дня
+
+          .adventages__body
+            .adventages__icon.icon-7
+            .adventages__title Вся продукция </br> сертифицирована
+
+          .adventages__body
+            .adventages__icon.icon-8
+            .adventages__title Гарантия на всю </br> продукцию 1 год
+
+          .adventages__body
+            .adventages__icon.icon-9
+            .adventages__title Вся мебель в наличии </br> на складе
+            
+      .last-view
+        .page-title 
+          span Недавно просмотренное
+        .container
+          .row
+            .col-sm-3
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+            .col-sm-3
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-2.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+            .col-sm-3
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-3.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+            .col-sm-3
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+
+
+    .page-buffer
+
+
+
+  //= template/footer.jade

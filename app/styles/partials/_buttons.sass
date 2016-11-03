@@ -6,13 +6,13 @@
  ------------------------------------------------------------*/
 
 .btn
-  min-width: 250px
+  min-width: 185px
   position: relative
   display: inline-block
   vertical-align: middle
-  padding: 10px 20px
+  padding: 11px 20px 13px 20px
   margin: 0
-  font: 20px/20px 'PT Sans', Arial, sans-serif
+  font: 18px/20px $btn-font-family
   text-align: center
   text-decoration: none
   cursor: pointer
@@ -20,7 +20,7 @@
   border: none
   background-color: $btn-bg-color
   color: $btn-color
-  border-radius: 10px
+  border-radius: 22px
   transition: all 0.2s ease
   &:hover
     background-color: $btn-h-bg-color
@@ -37,15 +37,35 @@
 .btn-max
   width: 100%
 
+.btn-large
+  padding: 15px 20px
+  min-width: 260px
+  font-size: 24px
+  text-transform: uppercase
+  +border-radius(31px)
+  +mobile
+    min-width: 190px
 
+.btn-big
+  padding: 26px 20px
+  min-width: 465px
+  +border-radius(37px)
+  +tablet
+    padding: 20px 15px
+    min-width: 150px
+    width: 100%
+    max-width: 300px
+
+.btn-arrow
+  display: inline-block
+  vertical-align: bottom
+  margin-left: 14px
+  +sprite($btn-arrow)
+
+.icon-cart
+  display: inline-block
+  vertical-align: middle
+  margin-left: 15px
+  +sprite($cart-btn)
 
 /*----------- media style -----------*/
-
-
-// @media only screen and (max-width: 768px)
-
-@media only screen and (max-width: 480px)
-
-  .btn 
-    min-width: 100px
-    padding: 5px 10px

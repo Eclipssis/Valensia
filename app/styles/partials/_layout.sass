@@ -22,8 +22,63 @@ html, body
   min-height: 100%
   min-width: 320px
 
+#middle
+  padding-bottom: 100px
+  +tablet
+    padding-bottom: 50px
+
 .container
-  padding: 0 15px
+  max-width: 1220px
+  width: 100%
+
+.left-aside
+  padding: 40px 0 20px
+  +desktop
+    text-align: center
+  +mobile
+    background-color: #f3f3f3
+
+.content
+  padding-top: 40px
+  +tablet
+    padding-top: 20px
+
+.pagination
+  border: none
+  background: none
+  +border-radius(0px)
+  margin-top: 0
+  display: block
+  text-align: center
+  > li
+    float: none
+    display: inline-block
+    > a
+      border: none
+      color: #202020
+      font-size: 16px
+      padding: 0.5px 7.1px
+      margin: 0 2px
+      &:hover, &:focus
+        background: none
+        text-decoration: underline
+
+    &:first-child a, &:last-child a
+      border-bottom: 1px dashed #000000
+      padding: 0
+      margin: 0 30px
+      &:hover, &:focus
+        border-color: #fff
+        text-decoration: none
+
+  > li.active
+    > a 
+      +border-radius(50%)
+      background-color: $red
+      margin: 0 5px
+      &:hover
+        background-color: $red
+        text-decoration: none
 
 
 /*----------- Navigation *
@@ -45,18 +100,378 @@ html, body
  ------------------------------------------------------------*/
 .header
   position: relative
-  padding: 15px 0
+  padding: 25px 0 0
+  +desktop
+    text-align: center
 
 .logo
-  float: left
-  margin: 0 20px 0 0
+  position: relative
+  display: inline-block
+  span 
+    position: absolute
+    bottom: -10px
+    right: 0
+    text-align: right
+    font-size: 15px
+    color: #6e6e6e
+    text-transform: uppercase
+    font-family: 'Roboto', sans-serif
 
+.header-top
+  border-bottom: 1px solid #e7e7e7
+  padding-bottom: 35px
+  +tablet
+    padding-bottom: 15px
+  +mobile
+    padding-bottom: 0
+
+  .btn-header
+    min-width: 210px
+    +tablet
+      margin-bottom: 15px
+
+.header-info-wrap
+  float: right
+  margin-top: 15px
+  margin-left: 67px
+  +desktop-large
+    margin-left: 30px
+  +desktop
+    float: none
+    display: inline-block
+    margin-left: 0
+  +tablet
+    margin-top: 25px
+
+.header-bottom-wrap
+  float: right
+  width: 100%
+  text-align: right
+  +desktop
+    float: none
+    display: inline-block
+    width: auto
+    min-width: 700px
+  +tablet
+    min-width: 100%
+
+
+.contact-info
+  display: inline-block
+  vertical-align: middle
+  margin-right: 39px
+  &--footer
+    vertical-align: top
+    margin-right: 28px
+
+  +desktop-large
+    margin-right: 15px
+  +tablet
+    margin-bottom: 15px
+  +mobile
+    display: none
+
+  > span
+    font-size: 15px
+    line-height: 17px
+    position: relative
+    font-weight: 400
+
+  &__location 
+    display: inline-block
+    max-width: 185px
+    color: #2e2e2e
+    padding-left: 20px
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($location)
+      top: 2px
+      left: 0 
+
+    +mobile
+      padding-left: 35px
+      max-width: 200px
+      &:before
+        top: 4px
+        left: 3px
+
+  &__shedule
+    display: block
+    font-weight: 300
+    color: #6e6e6e
+    padding-left: 35px
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($clock)
+      width: 17px
+      top: 3px
+      left: 0
+    span
+      display: block
+      font-weight: 400
+
+  &__mail
+    padding-left: 35px
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($mail)
+      top: 50%
+      left: 0
+      margin-top: -6px
+
+.phone-numbers
+  display: inline-block
+  vertical-align: middle
+  padding-left: 38px
+  margin-right: 34px
+  border-left: 1px solid #c2c2c2
+  +desktop-large
+    margin-right: 20px
+    padding-left: 20px
+  +tablet
+    margin-bottom: 15px
+  +mobile
+    border: none
+  &__item
+    display: block
+    padding-left: 40px
+    font-size: 21px
+    position: relative
+    &:before
+      position: absolute
+      content: ' '
+      top: 50%
+      left: 0
+      margin-top: -8px
+      +sprite($phone)
+  b 
+    color: #262626
+
+.header-bottom
+  padding: 30px 0
+  +mobile
+    padding: 20px 0
+
+.navbar-default
+  background-color: $red
+  border: none
+  min-height: 100%
+  margin-bottom: 0
+  +mobile
+      padding: 8px 0
+
+  .navbar-collapse
+    padding: 0
+    border: none
+    box-shadow: none
+    +tablet
+      padding: 0 10px
+  
+  .navbar-toggle
+    border: none
+    background: none 
+    &:hover, &:focus
+      background: none
+      border: none
+    .icon-bar
+      height: 4px
+      width: 30px
+      background-color: #ffffff
+      +border-radius(0px)
+
+  .navbar-nav
+    display: table
+    width: 100%
+    +desktop
+      display: block
+    +tablet
+      display: block
+    > li 
+      float: none
+      width: auto
+      display: table-cell
+      vertical-align: top
+      border-right: 1px solid #f56363
+      &:last-child
+        border: none
+      +desktop
+        display: inline-block
+        min-width: 145px
+      +tablet
+        display: block
+        border: none
+        
+      > a
+        text-align: center
+        font-size: 15px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 700
+        padding: 17px 10px 
+        &:hover, &:focus
+          background-color: darken($red, 8%)
+          color: #ffffff
+        +desktop
+
+        +tablet
+          display: inline-block
+          width: auto
+          font-size: 15px
+          font-weight: 500
+
+    > li.active
+      > a 
+        background-color: darken($red, 8%)
+        color: #ffffff
+        &:hover, &:focus
+          background-color: darken($red, 8%)
+          color: #ffffff
+
+.item-counter
+  text-decoration: none
+  border-bottom: 1px dashed #000
+  display: inline-block!important
+  &:hover, &:focus
+    border: none
+
+.cart
+  border: 1px solid #ddd
+  border-radius: 10px
+  display: inline-block
+  max-width: 185px
+  width: 100%
+  text-align: left
+  +tablet
+    padding: 5px 15px
+    max-width: 200px
+  +mobile
+    line-height: 18px
+    padding: 2px 15px 5px
+    position: absolute
+    left: 10px
+    bottom: -80px
+    z-index: 3
+    background-color: #FFF
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.41), 0px 0px 4px rgba(125, 118, 118, 0.87)
+  
+
+  &__icon
+    width: 57px
+    height: 57px
+    +border-radius(50%)
+    background: $red
+    position: relative
+    left: -25px
+    display: inline-block
+    vertical-align: middle
+    &:before
+      position: absolute
+      content: ' '
+      +sprite($cart)
+      top: 50%
+      left: 50%
+      margin-top: -18.5px
+      margin-left: -21.5px
+    +tablet
+      display: none
+
+  &__body
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    left: -10px
+    +tablet
+      left: 0
+
+  &__counter
+    display: block
+    text-align: center
+    background-color: #f3f3f3
+    width: 22px
+    height: 22px
+    padding: 2px 0
+    +border-radius(50%)
+    border: 2px solid $red
+    color: #3e3e3e
+    font-size: 15px
+    line-height: 15px
+    font-weight: 400
+    position: relative
+    z-index: 2
+
+  &__title
+    display: block
+    color: #313131
+    text-transform: uppercase
+    font-size: 17px
+    line-height: 20px
+    margin-top: 4px
+    font-weight: 700
+
+  &__value
+    display: block
+    font-size: 15px
 
 /*----------- Footer *
  ------------------------------------------------------------*/
 .footer
   width: 100%
   position: relative
+  background-color: #f8f8f8
+  padding: 45px 0 20px
+  +tablet
+    padding: 30px 0 60px
+  +mobile
+    padding: 30px 0
+
+  .header-top
+    border: none
+  +desktop-large
+    text-align: center
+
+  .header-info-wrap
+    margin-left: 0
+    +desktop-large
+      float: none
+      display: inline-block
+      text-align: right
+    +tablet
+      text-align: center
+      margin-top: 30px
+
+  .phone-numbers
+    padding-left: 28px
+    margin-right: 22px
+    +tablet
+      margin-top: 15px
+    +mobile
+      border: none
+
+  .btn-footer
+    min-width: 190px
+  
+  .btn-wrap
+    display: inline-block
+    +desktop-large
+      display: block
+      text-align: right
+      margin-top: 25px
+    +desktop
+      display: inline-block
+
+  .contact-info
+    text-align: left
+    +tablet
+      margin-top: 15px
+    +mobile
+      min-width: 200px
+      margin: 0
+
+    > span 
+      margin-bottom: 8px
 
 
 

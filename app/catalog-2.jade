@@ -1,0 +1,599 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+body
+  #wrapper
+
+    //= template/header.jade
+
+    section#middle
+
+      .content
+        .container
+          .row
+            .col-md-3
+              aside.left-aside
+
+                .product-filter
+                  span.product-filter__title Каталог
+                  ul
+                    li
+                      .checkbox
+                        input(type="checkbox" class="checkbox" id="checkbox-1")
+                        label(for="checkbox-1") <span></span> Диваны
+                    li
+                      .product-filter__group
+                        span.product-filter__subtitle Тип:
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-20")
+                          label(for="checkbox-20") <span></span> Аккордеон
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-21")
+                          label(for="checkbox-21") <span></span> Книжка
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-22")
+                          label(for="checkbox-22") <span></span> Еврокнижка
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-23")
+                          label(for="checkbox-23") <span></span> Выкатные
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-24")
+                          label(for="checkbox-24") <span></span> Клик-кляк
+
+                      .product-filter__group
+                        span.product-filter__subtitle Форма:
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-25")
+                          label(for="checkbox-25") <span></span> Прямые
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-26")
+                          label(for="checkbox-26") <span></span> Угловые
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-27")
+                          label(for="checkbox-27") <span></span> Софа
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-28")
+                          label(for="checkbox-28") <span></span> Кушетка
+
+                      .product-filter__group
+                        span.product-filter__subtitle Размер:
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-29")
+                          label(for="checkbox-29") <span></span> Маленькие
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-30")
+                          label(for="checkbox-30") <span></span> Большие
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-31")
+                          label(for="checkbox-31") <span></span> Односпальные
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-32")
+                          label(for="checkbox-32") <span></span> Двуспальные
+
+                      .product-filter__group
+                        span.product-filter__subtitle Материал:
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-33")
+                          label(for="checkbox-33") <span></span> Ткань
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-34")
+                          label(for="checkbox-34") <span></span> Кожзам 
+
+                      .product-filter__group
+                        span.product-filter__subtitle Назначение:
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-35")
+                          label(for="checkbox-35") <span></span> Для детской
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-36")
+                          label(for="checkbox-36") <span></span> Для кухни
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-37")
+                          label(for="checkbox-37") <span></span> Для дачи
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-38")
+                          label(for="checkbox-38") <span></span> Для гостиной
+                
+                .price-filter
+                  span.price-filter__title Фильтр По цене:
+
+                  .slider-price
+                      form(action='#', method='#')
+                          label(for='price') 
+                            input#price.price-filter__input(type='text', name='price')
+  
+                          label(for='price2') 
+                            input#price2.price-filter__input(type='text', name='price2')
+
+                          span руб
+                        #sliderPrice
+
+                .product-filter
+                  ul.border-none
+                    li
+                      .checkbox
+                        input(type="checkbox" class="checkbox" id="checkbox-10")
+                        label(for="checkbox-10") <span></span> Кресла-кровати
+                    li
+                      .checkbox
+                        input(type="checkbox" class="checkbox" id="checkbox-11")
+                        label(for="checkbox-11") <span></span> Кровати 
+                    li
+                      .checkbox
+                        input(type="checkbox" class="checkbox" id="checkbox-13")
+                        label(for="checkbox-13") <span></span> Наборы мягкой мебели
+                    li
+                      .checkbox
+                        input(type="checkbox" class="checkbox" id="checkbox-14")
+                        label.bold.color-red(for="checkbox-14") <span></span> Распродажа
+                    
+
+            .col-md-9
+              ul.product-list
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+                li
+                  .product
+                    .product__label.product__label--new Новинка
+                    .product__label.product__label--top Хит продаж
+                    .product__image
+                      img(src="images/sofa-1.jpg", alt="")
+                    span.product__title Название дивана
+                    span.product__size 1500 x 900 x 950
+                    span.product__price 5000
+                      span.product__curency руб
+                    a.btn.product__button(href="") Купить
+                      i.icon-cart
+
+              
+                ul.pagination
+                    li
+                      a(href='#') Предыдущая
+                    li.active
+                      a(href='#') 1
+                    li
+                      a(href='#') 2
+                    li
+                      a(href='#') 3
+                    li
+                      a(href='#') ...
+                    li
+                      a(href='#') 5
+                    li
+                      a(href='#') Следующая
+
+      .top-sales
+        .page-title 
+          span Хиты продаж
+
+        .container
+          .owl-carousel.product-carousel
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+      .new-products
+        .page-title 
+          span Новинки
+        .container
+          .owl-carousel.product-carousel
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+            .item
+              .product
+                  .product__label.product__label--new Новинка
+                  .product__label.product__label--top Хит продаж
+                  .product__image
+                    img(src="images/sofa-1.jpg", alt="")
+                  span.product__title Название дивана
+                  span.product__size 1500 x 900 x 950
+                  span.product__price 5000
+                    span.product__curency руб
+                  a.btn.product__button(href="") Купить
+                    i.icon-cart
+
+      .delivery-payment
+        .container
+          .delivery-payment__body
+            .delivery-payment__title Доставка и оплата
+            .delivery-payment__sales 
+              p при ПОКУПКЕ ДО 6000 руб - <span class="bold">700 руб</span>
+              p при ПОКУПКЕ ОТ 6000 руб - <span class="bold">БЕСПЛАТНО</span>
+              p.color-black.bold Доставка за пределы МКАД - 40 руб/км
+            .delivery-payment__banner
+              span.calendar-counter 1 день
+              span.text Доставка и Сборка 
+                span всего за <b>1 день!</b>
+          
+          a.btn(href="#!") Подробнее
+            i.btn-arrow
+
+      .partners
+        .container
+          span.partners__title Наши партнеры:
+          ul.partners__list
+            li
+              img(src="images/brand-1.jpg", alt="brand")
+            li
+              img(src="images/brand-2.jpg", alt="brand")
+            li
+              img(src="images/brand-1.jpg", alt="brand")
+            li
+              img(src="images/brand-2.jpg", alt="brand")
+            li
+              img(src="images/brand-1.jpg", alt="brand")
+            li
+              img(src="images/brand-2.jpg", alt="brand")
+
+
+
+
+
+    .page-buffer
+
+
+
+  //= template/footer.jade

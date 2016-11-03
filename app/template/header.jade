@@ -1,0 +1,78 @@
+header#header.header
+
+  .header-top
+    .container
+      .row
+        .col-md-3.col-lg-4
+          .logo
+            a(href='#!')
+              img(src='images/logo.png', alt='logo')
+
+        .col-md-9.col-lg-8
+          .header-info-wrap
+            .contact-info
+              span.contact-info__shedule Ежедневно 
+                span с 9:00 до 20:00
+              span.contact-info__mail valensia.32@mail.ru
+
+            .phone-numbers
+              span.phone-numbers__item
+                | + 7 (4832) 
+                b.bold 92-99-88
+              span.phone-numbers__item
+                | + 7 (905) 
+                b.bold 102-07-40
+
+            a.btn.btn-header(href='#!' data-toggle="modal" data-target="#myModal") Заказать звонок
+  
+  .header-bottom
+    .container
+      .row
+        .col-md-9.col-lg-8.col-md-offset-3.col-lg-offset-4
+          .header-bottom-wrap
+            form.header-form(action='')
+              input.header-form__input(type="text" placeholder="Поиск по сайту")
+              button.header-form__submit-btn(type="submit")
+            
+            .cart
+              .cart__icon
+                span.cart__counter 0
+              .cart__body
+                span.cart__title Корзина
+                span.cart__value 
+                  span.visible-xs <a href="#!" class="item-counter"><span class="bold">0</span> товаров</a> на <span class="bold">0</span> руб.
+                  span.hidden-xs сумма <span class="bold">0</span> руб.
+
+
+  nav.navbar.navbar-default(role='navigation')
+    .container
+
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+      // Collect the nav links, forms, and other content for toggling
+      #navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Главная
+          li
+            a(href='#') О компании
+          li
+            a(href='#') Акции
+          li
+            a(href='#') Каталог
+          li
+            a(href='#') Новинки
+          li
+            a(href='#') Хиты продаж
+          li
+            a(href='#') Доставка и оплата
+          li
+            a(href='#') Партнерам
+          li
+            a(href='#') Контакты

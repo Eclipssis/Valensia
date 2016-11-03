@@ -1,0 +1,130 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+body
+  #wrapper
+
+    //= template/header.jade
+
+    section#middle
+      .content
+        .container
+
+          .row
+            .col-sm-8
+              .page-subtitle Оформление заказа
+              
+              .product-table
+                .tr.hiddex-mob
+                  .th Наименование
+                  .th
+                  .th Количество
+                  .th Сумма
+
+                .tr
+                  .td.product-table__image
+                    img(src="images/sofa-3.jpg", alt="sofa")
+                  .td.product-table__name Диван
+                    span Название
+                  .td
+                    .counter-panel
+                      span.minus
+                      input(type='text', value='1' readonly="readonly")
+                      span.plus
+
+                  .td.product-table__price 5 000 руб.
+                  .td
+                    i.product-table__delete
+
+                .tr
+                  .td.product-table__image
+                    img(src="images/sofa-2.jpg", alt="sofa")
+                  .td.product-table__name Диван
+                    span Название
+                  .td
+                    .counter-panel
+                      span.minus
+                      input(type='text', value='1' readonly="readonly")
+                      span.plus
+
+                  .td.product-table__price 5 000 руб.
+                  .td
+                    i.product-table__delete
+
+                .tr
+                  .td.product-table__image
+                    img(src="images/sofa-1.jpg", alt="sofa")
+                  .td.product-table__name Диван
+                    span Название
+                  .td
+                    .counter-panel
+                      span.minus
+                      input(type='text', value='1' readonly="readonly")
+                      span.plus
+
+                  .td.product-table__price 5 000 руб.
+                  .td
+                    i.product-table__delete
+
+                .tr
+                  .td.product-table__image
+                    img(src="images/sofa-2.jpg", alt="sofa")
+                  .td.product-table__name Диван
+                    span Название
+                  .td
+                    .counter-panel
+                      span.minus
+                      input(type='text', value='1' readonly="readonly")
+                      span.plus
+
+                  .td.product-table__price 5 000 руб.
+                  .td
+                    i.product-table__delete
+
+
+            .col-sm-3.col-sm-offset-1
+              .bill 
+                .bill__header
+                  span *************************************
+                  span.bill__title        ОБЩАЯ СУММА ЧЕКА
+                  span *************************************
+                .bill__body
+                  span.bill__product-name Товары
+                  span.bill__product-price 10 000 руб
+                .bill__footer
+                  span.pull-left Доставка
+                  span.pull-right 0 руб
+                .bill__divider
+                .bill__total Итого: 
+                  span 10 000 руб
+          
+          .description
+            .description__body
+              span.description__title ДОСТАВКА
+              p при ПОКУПКЕ ДО 6000 руб - 
+                b.bold 700 руб
+              p при ПОКУПКЕ ОТ 6000 руб - 
+                b.bold.color-red БЕСПЛАТНО
+              p Доставка за пределы МКАД - 
+                b.bold 40 руб/км
+
+            .description__body
+              span.description__title ПОДЪЕМ
+              p При наличии грузового лифта (или вместимого пассажирского лифта) подъем стоит 
+                b.bold 500 руб.
+              p В цену подъема включены занос в квартиру и сборка
+
+          .text-center
+            a.btn.btn-big(href="#!") ОФОРМИТЬ ЗАКАЗ
+
+        
+
+
+
+    .page-buffer
+
+
+
+  //= template/footer.jade

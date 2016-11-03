@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    jade = require('gulp-jade'),
     browserSync = require("browser-sync"),
     spritesmith = require('gulp.spritesmith'),
     merge = require('merge-stream'),
@@ -24,14 +25,14 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: {
-        html: 'app/*.html',
+        html: 'app/*.jade',
         js: 'app/js/*.js',
         style: 'app/styles/main.sass',
         img: 'app/images/**/*.*',
         fonts: 'app/fonts/**/*.*'
     },
     watch: {
-        html: 'app/**/*.html',
+        html: 'app/**/*.jade',
         js: 'app/js/**/*.js',
         style: 'app/styles/**/*.sass',
         img: 'app/images/**/*.*',
@@ -61,6 +62,9 @@ gulp.task('clean', function (cb) {
 gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(rigger())
+        .pipe(jade({
+            pretty: true
+        })) 
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });

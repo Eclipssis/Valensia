@@ -2,15 +2,108 @@ jQuery(function($){
 
   $('input[placeholder], textarea[placeholder]').placeholder();
 
-  // add-open-class
-  $('.menu-icon').click(function(){
-   if($(this).parent().is('.menu-open')){
-     $(this).parent().removeClass('menu-open');
-     $('body').removeClass('menu-open-wrapper-page');
-   }else{
-     $(this).parent().addClass('menu-open');
-     $('body').addClass('menu-open-wrapper-page');
-   }
+  // PRICE SLIDER
+
+  $('#price').change(function () {
+    var val = $(this).val();
+    $('#sliderPrice').slider("values",0,val);
+  });
+    
+  $('#price2').change( function() {
+    var val2 = $(this).val();
+    $('#sliderPrice').slider("values",1,val2);
+  });
+
+  $( "#sliderPrice" ).slider({
+    range: true,
+    min: 0,
+    step: 100,
+    max: 10000,
+    values: [ 1800, 8000 ],
+    slide: function( event, ui ) {
+      $('#price').val(ui.values[0]);
+      $('#price2').val(ui.values[1]);
+    }
+  });
+
+  $('#price').val($('#sliderPrice').slider("values",0));
+  $('#price2').val($('#sliderPrice').slider("values",1));
+
+  // OWL CAROUSEL
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    nav: true,
+    responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      768:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+    }
+  });
+
+  // PLUS MINUS
+
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+
+  $('.plus').click(function () {
+     var $input = $(this).parent().find('input');
+     $input.val(parseInt($input.val()) + 1);
+     $input.change();
+     return false;
+   });
+
+  // Grey theme - 
+  $('.minus').click(function () {
+    var $input = $('.grey-theme').find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+
+  $('.plus').click(function () {
+     var $input = $('.grey-theme').find('input');
+     $input.val(parseInt($input.val()) + 1);
+     $input.change();
+     return false;
+   });
+
+  // The slider being synced must be initialized first
+  $('#carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 165,
+    itemMargin: 30,
+    asNavFor: '#slider'
+  });
+ 
+  $('#slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel"
   });
 
 });//end ready
